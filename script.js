@@ -14,7 +14,7 @@ function generateGrid() {
   }
   
   // If cell amount exceeds limit, alert user and retry input prompt
-  while (cellsInRow > MAX_CELLS_IN_ROW || isNaN(cellsInRow)) {
+  while (cellsInRow > MAX_CELLS_IN_ROW) {
     alert("Sorry, there can only be up to " + MAX_CELLS_IN_ROW + " cells per row. Please try again");
     cellsInRow = prompt("How many cells would you like per row?");  
   }
@@ -82,8 +82,6 @@ modeButton.addEventListener('click', function() {
   }
 
 });
-
-modeButton.style.backgroundColor = "orange";
 
 // getRandomColour function 
 function getRandomColour() {
